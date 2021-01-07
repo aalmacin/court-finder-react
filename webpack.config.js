@@ -1,11 +1,10 @@
 const path = require('path');
 
 module.exports = {
-    // define entry file and output
-    entry: './src/index.js',
+    entry: './src/app.js',
     output: {
-        path: path.resolve('dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        path: path.resolve('dist')
     },
     // define babel loader
     module: {
