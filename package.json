@@ -1,5 +1,5 @@
 {
-  "name": "space-ways-react",
+  "name": "court-finder-react",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aalmacin/space-ways-react.git"
+    "url": "git+https://github.com/aalmacin/court-finder-react.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aalmacin/space-ways-react/issues"
+    "url": "https://github.com/aalmacin/court-finder-react/issues"
   },
-  "homepage": "https://github.com/aalmacin/space-ways-react#readme",
+  "homepage": "https://github.com/aalmacin/court-finder-react#readme",
   "description": "",
   "devDependencies": {
     "@babel/core": "^7.12.10",
