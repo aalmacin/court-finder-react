@@ -3,9 +3,14 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  rules: {
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": "off",
+  },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
+    'prettier'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,8 +22,7 @@ module.exports = {
   },
   plugins: [
     'react',
+    'prettier',
     '@typescript-eslint',
   ],
-  rules: {
-  },
 };
