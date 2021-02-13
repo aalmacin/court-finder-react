@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const CopyPlugin = require("copy-webpack-plugin")
 
 module.exports = {
   mode: "development",
@@ -26,6 +27,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
     }),
+    new CopyPlugin({
+      patterns: [
+        {from: "./src/app/fonts", to: "fonts"}
+      ]
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, "dist"),

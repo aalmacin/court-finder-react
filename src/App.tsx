@@ -2,6 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Header } from "./app/Header";
 import { Global, css } from "@emotion/react";
+import { DropdownSection } from "./app/DropdownSection";
+import { InfoSection } from "./app/InfoSection";
 
 const AppDiv = styled.div`
   display: flex;
@@ -9,15 +11,20 @@ const AppDiv = styled.div`
 `;
 
 const globalStyles = css`
+  @font-face {
+    font-family: Benne;
+    src: url('fonts/Benne-Regular.ttf');
+  }
   * {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
   }
   body {
+    font-family: Benne;
+    font-size: 10px;
     line-height: 1;
   }
   ol,
@@ -47,7 +54,8 @@ export const App: React.FC = () => {
       <Global styles={globalStyles} />
       <AppDiv>
         <Header />
-        Welcome to Court Finder
+        <DropdownSection />
+        <InfoSection />
       </AppDiv>
     </>
   );
