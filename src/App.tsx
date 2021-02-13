@@ -22,9 +22,14 @@ const globalStyles = css`
     font-size: 100%;
     vertical-align: baseline;
   }
+  html {
+    font-size: 10px;
+    @media only screen and (max-width: 600px) {
+        font-size: 8px;
+    }
+  }
   body {
     font-family: Benne;
-    font-size: 10px;
     line-height: 1;
   }
   ol,

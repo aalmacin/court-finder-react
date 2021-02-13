@@ -21,10 +21,10 @@ const Section = styled.div`
 
 export const InfoSection = () => (
   <>
-  <HR />
-  <InfoSectionDiv>
-    <Section>Section Left</Section>
-    <Section>Section Right</Section>
-  </InfoSectionDiv>
+    <HR />
+    <InfoSectionDiv>
+      <Section>Section Left</Section>
+      <Section>Section Right</Section>
+    </InfoSectionDiv>
   </>
 );

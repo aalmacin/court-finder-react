@@ -7,6 +7,8 @@ module.exports = {
     "no-use-before-define": "off",
     "import/prefer-default-export": "off",
     "react/jsx-filename-extension": "off",
+    "import/extensions": "off",
+    "import/no-unresolved": "off"
   },
   extends: [
     'airbnb',

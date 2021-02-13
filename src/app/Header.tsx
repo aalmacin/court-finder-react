@@ -10,6 +10,8 @@ const HeaderDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  min-width: 60rem;
+  width: 100%;
 `;
 
 const Logo = styled.div`
