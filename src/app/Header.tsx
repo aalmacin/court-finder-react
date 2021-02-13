@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-const HeaderDiv = styled.div`
+    const HeaderDiv = styled.div`
   display: flex;
   background-color: gray;
 `;
