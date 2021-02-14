@@ -5,11 +5,6 @@ import { Header } from './app/Header';
 import { DropdownSection } from './app/DropdownSection';
 import { InfoSection } from './app/InfoSection';
 
-const AppDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 const globalStyles = css`
   @font-face {
     font-family: Benne;
@@ -21,6 +16,7 @@ const globalStyles = css`
     border: 0;
     font-size: 100%;
     vertical-align: baseline;
+    box-sizing: border-box;
   }
   html {
     font-size: 10px;
@@ -53,13 +49,30 @@ const globalStyles = css`
   }
 `;
 
+const AppDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+`;
+
 export const App: React.FC = () => (
   <>
     <Global styles={globalStyles} />
     <AppDiv>
       <Header />
-      <DropdownSection />
-      <InfoSection />
+      <Body>
+        <DropdownSection />
+        <InfoSection />
+      </Body>
     </AppDiv>
   </>
-  );
+);

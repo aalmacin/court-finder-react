@@ -9,6 +9,8 @@ const Header = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  background-color: ${colors.tertiary}77;
+  color: black;
 `;
 
 const HeaderText = styled.div`
@@ -21,16 +23,19 @@ const Content = styled.div`
   font-size: 1.8rem;
   padding: 1rem;
   border: 0.1rem solid ${colors.main};
+  border-top: none;
 `;
 
 type AccordionProps = {
-  defaultExpanded: boolean;
+  defaultExpanded?: boolean;
   header: string;
+  className?: string;
 };
 
 export const Accordion: React.FC<AccordionProps> = ({
-  defaultExpanded,
+  defaultExpanded = false,
   header,
+  className,
   children
 }) => {
   const [isExpanded, setExpanded] = useState(defaultExpanded);
@@ -39,12 +44,12 @@ export const Accordion: React.FC<AccordionProps> = ({
     setExpanded(!isExpanded);
   };
   return (
-    <>
+    <div className={className}>
       <Header onClick={toggleExpanded}>
         <HeaderText>{header}</HeaderText>
         <HeaderIcon>{isExpanded ? '-' : '+'}</HeaderIcon>
       </Header>
       {isExpanded && <Content>{children}</Content>}
-    </>
+    </div>
   );
 };
