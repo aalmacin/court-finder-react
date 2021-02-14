@@ -1,39 +1,36 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin")
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  mode: "development",
-  entry: "./src/index.tsx",
+  mode: 'development',
+  entry: './src/index.tsx',
   output: {
-    filename: "main.js",
-    path: path.resolve("dist"),
+    filename: 'main.js',
+    path: path.resolve('dist')
   },
   resolve: {
-    extensions: [".js", ".jsx", ".json", ".ts", ".tsx"],
+    extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
   },
   // define babel loader
   module: {
     rules: [
-      { test: /\.jsx?$/, loader: "babel-loader", exclude: /node_modules/ },
       {
         test: /\.tsx?$/,
-        loader: "awesome-typescript-loader",
-        exclude: /node_modules/,
-      },
-    ],
+        loader: 'awesome-typescript-loader',
+        exclude: /node_modules/
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html"),
+      template: path.resolve(__dirname, 'src', 'index.html')
     }),
     new CopyPlugin({
-      patterns: [
-        {from: "./src/app/fonts", to: "fonts"}
-      ]
+      patterns: [{ from: './src/app/fonts', to: 'fonts' }]
     })
   ],
   devServer: {
-    contentBase: path.join(__dirname, "dist"),
-  },
+    contentBase: path.join(__dirname, 'dist')
+  }
 };

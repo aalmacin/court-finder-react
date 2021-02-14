@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { colors } from './designTokens/colors';
-
+import { Accordion } from './components/Accordion';
 
 const HR = styled.div`
-  border-top: .1rem solid ${colors.main};
-`
+  border-top: 0.1rem solid ${colors.main};
+`;
 const InfoSectionDiv = styled.div`
   display: flex;
   padding: 2rem;
@@ -17,13 +17,18 @@ const InfoSectionDiv = styled.div`
 
 const Section = styled.div`
   width: 50%;
-`
+  padding: 1rem;
+`;
 
 export const InfoSection = () => (
   <>
     <HR />
     <InfoSectionDiv>
-      <Section>Section Left</Section>
+      <Section>
+        <Accordion header="Payment Options" defaultExpanded>
+          Dummy Payment Options
+        </Accordion>
+      </Section>
       <Section>Section Right</Section>
     </InfoSectionDiv>
   </>

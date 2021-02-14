@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Header } from "./app/Header";
-import { Global, css } from "@emotion/react";
-import { DropdownSection } from "./app/DropdownSection";
-import { InfoSection } from "./app/InfoSection";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Global, css } from '@emotion/react';
+import { Header } from './app/Header';
+import { DropdownSection } from './app/DropdownSection';
+import { InfoSection } from './app/InfoSection';
 
 const AppDiv = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ const globalStyles = css`
   html {
     font-size: 10px;
     @media only screen and (max-width: 600px) {
-        font-size: 8px;
+      font-size: 8px;
     }
   }
   body {
@@ -44,7 +44,7 @@ const globalStyles = css`
   blockquote:after,
   q:before,
   q:after {
-    content: "";
+    content: '';
     content: none;
   }
   table {
@@ -53,15 +53,13 @@ const globalStyles = css`
   }
 `;
 
-export const App: React.FC = () => {
-  return (
-    <>
-      <Global styles={globalStyles} />
-      <AppDiv>
-        <Header />
-        <DropdownSection />
-        <InfoSection />
-      </AppDiv>
-    </>
+export const App: React.FC = () => (
+  <>
+    <Global styles={globalStyles} />
+    <AppDiv>
+      <Header />
+      <DropdownSection />
+      <InfoSection />
+    </AppDiv>
+  </>
   );
-};
