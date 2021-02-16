@@ -26,7 +26,7 @@ const Content = styled.div`
   border-top: none;
 `;
 
-type AccordionProps = {
+export type AccordionProps = {
   defaultExpanded?: boolean;
   header: string;
   className?: string;
